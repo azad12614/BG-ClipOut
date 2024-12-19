@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<span class="material-symbols-outlined">
+arrow_forward_ios
+</span>
+
+<span class="material-symbols-outlined">
+download
+</span>
+
+<span class="material-symbols-outlined">
+remove
+</span>
+
+<span class="material-symbols-outlined">
+switch_left
+</span>
+
+<span class="material-symbols-outlined">
+upload
+</span>
+
+<span class="material-symbols-outlined">
+paid
+</span>
+
+53 min
