@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
 
-const apiKey = process.env.apiKey;
+const apiKey = "3kkcZK1LV9vSGK7mk2mCvW5o";
+const apiKey2 = "4751b980d2464b818a932dc298630714";
 
 const url = apiKey.startsWith("3")
   ? "https://api.remove.bg/v1.0/removebg/"
