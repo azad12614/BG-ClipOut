@@ -92,10 +92,10 @@ const Result = () => {
               Background Removed
             </p>
             <div className="rounded-md border border-gray-300 h-full relative bg-layer">
-              {bgremove && (
+              {!bgremove && !image && (
                 <img
                   className="rounded-md border h-full"
-                  src={bgremove}
+                  src={assets.image_wo_bg}
                   alt=""
                 />
               )}
@@ -110,6 +110,13 @@ const Result = () => {
                     <p className="text-red-500 text-sm">Error: {error}</p>
                   )}
                 </>
+              )}
+              {bgremove && (
+                <img
+                  className="rounded-md border h-full"
+                  src={bgremove}
+                  alt=""
+                />
               )}
             </div>
           </div>
