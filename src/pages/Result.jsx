@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { assets } from "../assets/assets";
 
 const apiKey = "3kkcZK1LV9vSGK7mk2mCvW5o";
-const apiKey2 = "4751b980d2464b818a932dc298630714";
+// const apiKey = "4751b980d2464b818a932dc298630714";
 
-const url = apiKey.startsWith("3")
-  ? "https://api.remove.bg/v1.0/removebg/"
-  : "https://api.slazzer.com/v2.0/remove_image_background";
+const url = "https://api.remove.bg/v1.0/removebg/";
+// const url = "https://api.slazzer.com/v2.0/remove_image_background";
 
 const Result = () => {
   const [image, setImage] = useState(null);
@@ -26,7 +25,7 @@ const Result = () => {
   };
 
   const handleChangeBg = async (file) => {
-    if (!file) return;
+    // if (!file) return;
     setIsLoading(true);
     setError(null);
 
@@ -34,10 +33,10 @@ const Result = () => {
     formData.append("image_file", file);
     formData.append("size", "auto");
 
-    for (var pair of formData.entries()) {
-      console.log(pair[0] + ", " + pair[1]);
-    }
-    console.log("FormData:", formData);
+    // for (var pair of formData.entries()) {
+    //   console.log(pair[0] + ", " + pair[1]);
+    // }
+    // console.log("FormData:", formData);
 
     try {
       const res = await fetch(url, {
@@ -50,9 +49,9 @@ const Result = () => {
 
       if (!res.ok) {
         const errorText = await res.text();
-        console.error(
-          `API Error: ${res.status} - ${res.statusText} - ${errorText}`
-        );
+        // console.error(
+        //   `API Error: ${res.status} - ${res.statusText} - ${errorText}`
+        // );
         setError(`API Error: ${res.status} - ${res.statusText} - ${errorText}`);
         return;
       }
@@ -61,7 +60,7 @@ const Result = () => {
       const reader = new FileReader();
       reader.onloadend = () => setBgremove(reader.result);
       reader.readAsDataURL(blob);
-      console.log(bgremove);
+      // console.log(bgremove);
     } catch (error) {
       setError(error.message);
     } finally {

@@ -3,9 +3,11 @@ import { assets } from "../assets/assets";
 
 const BgSlider = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
+
   const handleSliderChange = (e) => {
     setSliderPosition(e.target.value);
   };
+
   return (
     <div className="pb-10 md:py-20 mx-2">
       <h1 className="mb-12 sm:mb-16 text-center text-2xl md:text-3xl lg:text-4xl mt-4 font-semibold bg-gradient-to-r from-gray-900 to-gray-300 bg-clip-text text-transparent">
@@ -15,7 +17,7 @@ const BgSlider = () => {
         <img
           className="w-full max-w-3xl"
           src={assets.image_w_bg}
-          style={{ clipPath: `inset(0 ${100.2 - sliderPosition}% 0 0)` }}
+          style={{ clipPath: `inset(0 ${100.0 - sliderPosition}% 0 0)` }}
           alt=""
         />
         <img
